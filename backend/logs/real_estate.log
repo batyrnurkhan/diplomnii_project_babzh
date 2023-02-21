@@ -14,3 +14,84 @@
 2023-02-21 20:34:57,817 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-02-21 20:36:10,113 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\ratings\admin.py changed, reloading.
 2023-02-21 20:36:11,013 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 20:56:09,647 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 20:56:24,632 django.request WARNING  Not Found: /
+2023-02-21 20:59:03,974 django.request WARNING  Unauthorized: /api/v1/auth/users/
+2023-02-21 20:59:50,063 django.request WARNING  Unauthorized: /api/v1/auth/users/
+2023-02-21 21:01:54,418 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\settings\development.py changed, reloading.
+2023-02-21 21:01:55,807 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:01:58,515 django.request WARNING  Unauthorized: /api/v1/auth/users/
+2023-02-21 21:02:05,023 django.request ERROR    Internal Server Error: /api/v1/auth/users/
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\djoser\views.py", line 144, in perform_create
+    settings.EMAIL.activation(self.request, context).send(to)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\templated_mail\mail.py", line 78, in send
+    super(BaseEmailMessage, self).send(*args, **kwargs)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\mail\message.py", line 255, in get_connection
+    self.connection = get_connection(fail_silently=fail_silently)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\mail\__init__.py", line 50, in get_connection
+    klass = import_string(backend or settings.EMAIL_BACKEND)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\AppData\Local\Programs\Python\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1128, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1206, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1178, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1142, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'djcelery_email'
+2023-02-21 21:03:16,385 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\settings\development.py changed, reloading.
+2023-02-21 21:03:17,505 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:03:22,868 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\settings\development.py changed, reloading.
+2023-02-21 21:03:23,878 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:03:26,991 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\settings\development.py changed, reloading.
+2023-02-21 21:03:28,147 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:03:30,070 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\settings\development.py changed, reloading.
+2023-02-21 21:03:31,228 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:03:34,301 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\settings\development.py changed, reloading.
+2023-02-21 21:03:35,481 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:03:37,573 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\settings\development.py changed, reloading.
+2023-02-21 21:03:38,936 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:03:43,832 django.request WARNING  Bad Request: /api/v1/auth/users/
+2023-02-21 21:06:09,007 django.request WARNING  Not Found: /activate/Mw/bjzp83-8b3475973c733cd8dfdb243c8cd1b60b
+2023-02-21 21:06:09,289 django.request WARNING  Not Found: /favicon.ico
+2023-02-21 21:10:41,675 django.request WARNING  Not Found: /password/reset/confirm/Mw/bjzphb-02f7b944ba55c896eb394ce94aeb7d24
+2023-02-21 21:12:22,281 django.request WARNING  Bad Request: /api/v1/auth/users/reset_password_confirm/
+2023-02-21 21:13:13,010 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
