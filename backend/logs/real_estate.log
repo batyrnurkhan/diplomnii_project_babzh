@@ -1,0 +1,6 @@
+2023-02-21 19:55:13,028 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 19:55:30,584 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 19:56:11,628 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\settings\base.py changed, reloading.
+2023-02-21 19:56:12,224 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 19:56:21,673 django.request WARNING  Not Found: /
+2023-02-21 19:56:36,711 django.request WARNING  Not Found: /dsadjas
