@@ -95,3 +95,36 @@ ModuleNotFoundError: No module named 'djcelery_email'
 2023-02-21 21:10:41,675 django.request WARNING  Not Found: /password/reset/confirm/Mw/bjzphb-02f7b944ba55c896eb394ce94aeb7d24
 2023-02-21 21:12:22,281 django.request WARNING  Bad Request: /api/v1/auth/users/reset_password_confirm/
 2023-02-21 21:13:13,010 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+2023-02-21 21:30:51,370 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\urls.py changed, reloading.
+2023-02-21 21:30:53,406 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:31:15,941 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 21:36:16,188 django.request ERROR    Internal Server Error: /api/v1/profile/update/biba
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/v1/profile/update/biba/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-02-21 21:36:30,019 django.request ERROR    Internal Server Error: /api/v1/profile/update/biba
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/api/v1/profile/update/biba/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-02-21 22:43:16,376 django.request WARNING  Unauthorized: /api/v1/profile/agents/all/
+2023-02-21 22:47:59,356 django.request WARNING  Unauthorized: /api/v1/profile/top-agents/all/
