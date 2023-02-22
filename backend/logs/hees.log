@@ -130,3 +130,513 @@ RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash an
 2023-02-21 22:47:59,356 django.request WARNING  Unauthorized: /api/v1/profile/top-agents/all/
 2023-02-21 22:55:32,491 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-02-21 22:56:05,128 django.request WARNING  Not Found: /
+2023-02-22 21:09:12,801 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:09:21,087 django.request WARNING  Not Found: /
+2023-02-22 21:09:21,510 django.request WARNING  Not Found: /favicon.ico
+2023-02-22 21:12:32,366 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:12:33,870 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:12:35,152 django.request ERROR    Internal Server Error: /supersecret/properties/property/add/
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: numeric field overflow
+DETAIL:  A field with precision 2, scale 2 must round to an absolute value less than 1.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1891, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1751, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1803, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1226, in save_model
+    obj.save()
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py", line 136, in save
+    super(Property, self).save(*args, **kwargs)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: numeric field overflow
+DETAIL:  A field with precision 2, scale 2 must round to an absolute value less than 1.
+
+2023-02-22 21:13:47,195 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:13:48,794 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:14:06,052 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:14:07,477 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:14:09,482 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:14:10,662 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:14:16,149 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:14:17,646 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:14:53,317 django.request ERROR    Internal Server Error: /supersecret/properties/property/add/
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NumericValueOutOfRange: numeric field overflow
+DETAIL:  A field with precision 3, scale 2 must round to an absolute value less than 10^1.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1891, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1751, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1803, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1226, in save_model
+    obj.save()
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py", line 136, in save
+    super(Property, self).save(*args, **kwargs)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.DataError: numeric field overflow
+DETAIL:  A field with precision 3, scale 2 must round to an absolute value less than 10^1.
+
+2023-02-22 21:15:54,032 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:15:55,839 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:16:03,585 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:16:04,902 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:16:07,077 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:16:08,423 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:16:12,855 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:16:14,095 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:17:26,004 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:20:36,192 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:20:37,890 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:20:39,957 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:20:41,293 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:20:44,568 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:20:45,876 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:28:13,611 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:28:15,237 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:28:19,617 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:28:20,989 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:28:27,688 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:28:29,011 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:28:41,194 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:28:42,499 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:28:44,771 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\models.py changed, reloading.
+2023-02-22 21:28:45,976 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:32:14,010 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\urls.py changed, reloading.
+2023-02-22 21:32:15,924 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:35:18,305 django.request WARNING  Method Not Allowed: /api/v1/properties/create/
+2023-02-22 21:35:28,480 django.request WARNING  Bad Request: /api/v1/properties/create/
+2023-02-22 21:36:49,450 django.request WARNING  Bad Request: /api/v1/properties/create/
+2023-02-22 21:36:54,967 django.request WARNING  Bad Request: /api/v1/properties/create/
+2023-02-22 21:38:00,334 django.request ERROR    Internal Server Error: /api/v1/properties/all/
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `property_number` is not valid for model `Property`.
+2023-02-22 21:38:21,080 django.request ERROR    Internal Server Error: /api/v1/properties/all/
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `property_number` is not valid for model `Property`.
+2023-02-22 21:39:25,805 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\serializers.py changed, reloading.
+2023-02-22 21:39:27,627 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:41:02,118 django.request ERROR    Internal Server Error: /api/v1/properties/agents/
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\auth\models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\views.py", line 68, in get_queryset
+    queryset = Property.objects.filter(user=user).order_by("-created_at")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\fields\related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'pkid' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000001A055E61490>.
+2023-02-22 21:41:14,376 django.request ERROR    Internal Server Error: /api/v1/properties/agents/
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\auth\models.py", line 437, in __int__
+    raise TypeError(
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\properties\views.py", line 68, in get_queryset
+    queryset = Property.objects.filter(user=user).order_by("-created_at")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\fields\related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'pkid' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x000001A056104110>.
+2023-02-22 21:43:55,572 django.request WARNING  Method Not Allowed: /api/v1/properties/update/aktau-smth/
+2023-02-22 21:44:15,773 django.request ERROR    Internal Server Error: /api/v1/properties/update/aktau-smth
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/api/v1/properties/update/aktau-smth/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-02-22 21:44:25,515 django.request WARNING  Bad Request: /api/v1/properties/update/aktau-smth/
+2023-02-22 21:45:43,360 django.request WARNING  Method Not Allowed: /api/v1/properties/update/aktau-smth/
+2023-02-22 21:46:09,902 django.request WARNING  Method Not Allowed: /api/v1/properties/update/part-2-smth/
+2023-02-22 21:46:28,626 django.request WARNING  Method Not Allowed: /api/v1/properties/update/part-2-smth/
+2023-02-22 21:46:58,218 django.request WARNING  Method Not Allowed: /api/v1/properties/update/part-2-smth/

@@ -25,7 +25,6 @@ class PropertySerializer(serializers.ModelSerializer):
             "country",
             "city",
             "postal_code",
-            "property_number",
             "price",
             "final_property_price",
             "course_time",

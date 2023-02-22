@@ -43,12 +43,12 @@ class Property(TimeStampedUUIDModel):
         on_delete=models.DO_NOTHING,
     )
 
-    title = models.CharField(verbose_name=_("Property Title"), max_length=250)
+    title = models.CharField(verbose_name=_("Course Title"), max_length=250)
 
     slug = AutoSlugField(populate_from="title", unique=True, always_update=True)
 
     ref_code = models.CharField(
-        verbose_name=_("Property Reference Code"),
+        verbose_name=_("Course Reference Code"),
         max_length=255,
         unique=True,
         blank=True,
@@ -77,24 +77,24 @@ class Property(TimeStampedUUIDModel):
 
 
     course_time = models.DecimalField(
-        verbose_name=_("Course Time(hours)"), max_digits=3, decimal_places=2, default=0.0
-    )
-    total_modules = models.IntegerField(verbose_name=_("Number of modules"), default=0)
+        verbose_name=_("Course Time(hours)"), max_digits=8, decimal_places=2, default=0.0
+    )#plot_area
+    total_modules = models.IntegerField(verbose_name=_("Number of modules"), default=0)#total floors
 
-    feedback = models.IntegerField(verbose_name=_("Feedback"), default=1)
+    feedback = models.IntegerField(verbose_name=_("Feedback"), default=1)#bedrooms
 
     lectures = models.DecimalField(
-        verbose_name=_("Lectures"), max_digits=2, decimal_places=2, default=1.0
+        verbose_name=_("Lectures"), max_digits=8, decimal_places=2, default=1.0#bathrooms
     )
 
     advert_type = models.CharField(
-        verbose_name=_("Advert Type"),
+        verbose_name=_("Subject"),
         max_length=50,
         choices=AdvertType.choices,
     )
 
     property_type = models.CharField(
-        verbose_name=_("Property Type"),
+        verbose_name=_("Type course"),
         max_length=50,
         choices=PropertyType.choices,
         default=PropertyType.OTHER,
