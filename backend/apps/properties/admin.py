@@ -4,8 +4,8 @@ from .models import Property, PropertyViews
 
 
 class PropertyAdmin(admin.ModelAdmin):
-    list_display = ["title", "country", "advert_type", "property_type"]
-    list_filter = ["advert_type", "property_type", "country"]
+    list_display = ["title", "country", "subject", "subject_type"]
+    list_filter = ["subject", "subject_type", "country"]
 
 
 admin.site.register(Property, PropertyAdmin)

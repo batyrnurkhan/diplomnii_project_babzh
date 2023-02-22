@@ -23,12 +23,12 @@ class PropertyPublishedManager(models.Manager):
 
 
 class Property(TimeStampedUUIDModel):
-    class AdvertType(models.TextChoices):
+    class Subject(models.TextChoices):
         CPP = "Cpp", _("cpp") # for sale
         HISTORY = "History", _("History")# for rent
         CYBERSECURITY = "Cyber Security", _("Cyber Security")# auction
 
-    class PropertyType(models.TextChoices):
+    class SubjectType(models.TextChoices):
         TRADITIONAL = "Traditional", _("Traditional")
         ELECTRONIC = "Electronic", _("Electronic")
         OFFICIAL = "Official", _("Official")
@@ -87,17 +87,17 @@ class Property(TimeStampedUUIDModel):
         verbose_name=_("Lectures"), max_digits=8, decimal_places=2, default=1.0#bathrooms
     )
 
-    advert_type = models.CharField(
+    subject = models.CharField(
         verbose_name=_("Subject"),
         max_length=50,
-        choices=AdvertType.choices,
+        choices=Subject.choices,
     )
 
-    property_type = models.CharField(
+    subject_type = models.CharField(
         verbose_name=_("Type course"),
         max_length=50,
-        choices=PropertyType.choices,
-        default=PropertyType.OTHER,
+        choices=SubjectType.choices,
+        default=SubjectType.OTHER,
     )
 
     cover_photo = models.ImageField(

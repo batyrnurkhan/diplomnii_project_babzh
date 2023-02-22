@@ -18,12 +18,12 @@ logger = logging.getLogger(__name__)
 
 class PropertyFilter(django_filters.FilterSet):
 
-    advert_type = django_filters.CharFilter(
-        field_name="advert_type", lookup_expr="iexact"
+    subject = django_filters.CharFilter(
+        field_name="subject", lookup_expr="iexact"
     )
 
-    property_type = django_filters.CharFilter(
-        field_name="property_type", lookup_expr="iexact"
+    subject_type = django_filters.CharFilter(
+        field_name="subject_type", lookup_expr="iexact"
     )
 
     price = django_filters.NumberFilter()
@@ -32,7 +32,7 @@ class PropertyFilter(django_filters.FilterSet):
 
     class Meta:
         model = Property
-        fields = ["advert_type", "property_type", "price"]
+        fields = ["subject", "subject_type", "price"]
 
 
 class ListAllPropertiesAPIView(generics.ListAPIView):
@@ -179,11 +179,11 @@ class PropertySearchAPIView(APIView):
         queryset = Property.objects.filter(published_status=True)
         data = self.request.data
 
-        advert_type = data["advert_type"]
-        queryset = queryset.filter(advert_type__iexact=advert_type)
+        subject = data["subject"]
+        queryset = queryset.filter(subject__iexact=subject)
 
-        property_type = data["property_type"]
-        queryset = queryset.filter(property_type__iexact=property_type)
+        subject_type = data["subject_type"]
+        queryset = queryset.filter(subject_type__iexact=subject_type)
 
         price = data["price"]
         if price == "$0+":

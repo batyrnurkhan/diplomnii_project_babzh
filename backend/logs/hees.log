@@ -640,3 +640,122 @@ RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash an
 2023-02-22 21:46:09,902 django.request WARNING  Method Not Allowed: /api/v1/properties/update/part-2-smth/
 2023-02-22 21:46:28,626 django.request WARNING  Method Not Allowed: /api/v1/properties/update/part-2-smth/
 2023-02-22 21:46:58,218 django.request WARNING  Method Not Allowed: /api/v1/properties/update/part-2-smth/
+2023-02-22 21:55:25,686 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:56:57,492 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 21:57:05,245 django.request ERROR    Internal Server Error: /supersecret/properties/property/
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "properties_property" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "properties_property"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 1932, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\options.py", line 834, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\views\main.py", line 123, in __init__
+    self.get_results(request)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\contrib\admin\views\main.py", line 279, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+           ^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "properties_property" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "properties_property"
+                                          ^
+
+2023-02-22 22:02:03,464 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:06:37,698 django.request WARNING  Unauthorized: /api/v1/profile/me/
+2023-02-22 22:07:18,737 django.request WARNING  Bad Request: /api/v1/properties/create/
+2023-02-22 22:39:19,426 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\enquiries\models.py changed, reloading.
+2023-02-22 22:39:22,007 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:39:59,364 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\urls.py changed, reloading.
+2023-02-22 22:40:01,038 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:40:08,346 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:40:33,716 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:40:42,492 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\enquiries\views.py changed, reloading.
+2023-02-22 22:40:43,959 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:40:51,614 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:41:02,578 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\enquiries\views.py changed, reloading.
+2023-02-22 22:41:04,040 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:47:12,729 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:51:11,543 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\ratings\models.py changed, reloading.
+2023-02-22 22:51:12,993 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:51:18,657 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\ratings\models.py changed, reloading.
+2023-02-22 22:51:20,061 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:51:32,921 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\ratings\models.py changed, reloading.
+2023-02-22 22:51:34,286 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:51:35,847 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\ratings\models.py changed, reloading.
+2023-02-22 22:51:37,187 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:51:53,172 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\ratings\models.py changed, reloading.
+2023-02-22 22:51:54,461 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:51:58,097 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\apps\ratings\models.py changed, reloading.
+2023-02-22 22:51:59,477 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:52:36,797 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\urls.py changed, reloading.
+2023-02-22 22:52:38,198 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 22:52:54,452 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\urls.py changed, reloading.
+2023-02-22 22:52:56,004 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 17:06:54,610 django.utils.autoreload INFO     Watching for file changes with StatReloader
