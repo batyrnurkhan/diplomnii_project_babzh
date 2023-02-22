@@ -49,6 +49,8 @@ LOCAL_APPS = [
     'apps.users',
     'apps.profiles',
     'apps.ratings',
+    'apps.properties',
+    'apps.enquiries',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -201,7 +203,7 @@ logging.config.dictConfig(
                 "level": "INFO",
                 "class": "logging.FileHandler",
                 "formatter": "file",
-                "filename": "logs/real_estate.log",
+                "filename": "logs/hees.log",
             },
             "django.server": DEFAULT_LOGGING["handlers"]["django.server"],
         },

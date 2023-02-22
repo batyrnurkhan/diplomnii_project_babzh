@@ -128,3 +128,5 @@ Traceback (most recent call last):
 RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 127.0.0.1:8000/api/v1/profile/update/biba/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
 2023-02-21 22:43:16,376 django.request WARNING  Unauthorized: /api/v1/profile/agents/all/
 2023-02-21 22:47:59,356 django.request WARNING  Unauthorized: /api/v1/profile/top-agents/all/
+2023-02-21 22:55:32,491 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-21 22:56:05,128 django.request WARNING  Not Found: /
