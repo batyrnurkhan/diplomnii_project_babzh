@@ -780,3 +780,10 @@ LINE 1: SELECT COUNT(*) AS "__count" FROM "properties_property"
 2023-02-23 02:22:59,965 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-02-23 02:23:58,570 django.request WARNING  Not Found: /
 2023-02-23 02:23:58,888 django.request WARNING  Not Found: /favicon.ico
+2023-02-23 02:28:02,192 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 02:28:49,097 django.utils.autoreload INFO     /app/apps/enquiries/urls.py changed, reloading.
+2023-02-23 02:28:51,387 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 02:29:46,746 django.utils.autoreload INFO     /app/apps/profiles/urls.py changed, reloading.
+2023-02-23 02:29:49,335 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 02:30:50,835 django.utils.autoreload INFO     /app/core/settings/base.py changed, reloading.
+2023-02-23 02:31:44,608 django.utils.autoreload INFO     Watching for file changes with StatReloader

@@ -24,9 +24,9 @@ class PropertyPublishedManager(models.Manager):
 
 class Property(TimeStampedUUIDModel):
     class Subject(models.TextChoices):
-        CPP = "Cpp", _("cpp") # for sale
-        HISTORY = "History", _("History")# for rent
-        CYBERSECURITY = "Cyber Security", _("Cyber Security")# auction
+        CPP = "Cpp", _("cpp")  # for sale
+        HISTORY = "History", _("History")  # for rent
+        CYBERSECURITY = "Cyber Security", _("Cyber Security")  # auction
 
     class SubjectType(models.TextChoices):
         TRADITIONAL = "Traditional", _("Traditional")
@@ -64,7 +64,7 @@ class Property(TimeStampedUUIDModel):
         default="KZ",
         blank_label="(select country)",
     )
-    
+
     city = models.CharField(verbose_name=_("City"), max_length=180, default="Almaty")
 
     postal_code = models.CharField(
@@ -75,16 +75,23 @@ class Property(TimeStampedUUIDModel):
         verbose_name=_("Price"), max_digits=8, decimal_places=2, default=0.0
     )
 
-
     course_time = models.DecimalField(
-        verbose_name=_("Course Time(hours)"), max_digits=8, decimal_places=2, default=0.0
-    )#plot_area
-    total_modules = models.IntegerField(verbose_name=_("Number of modules"), default=0)#total floors
+        verbose_name=_("Course Time(hours)"),
+        max_digits=8,
+        decimal_places=2,
+        default=0.0,
+    )  # plot_area
+    total_modules = models.IntegerField(
+        verbose_name=_("Number of modules"), default=0
+    )  # total floors
 
-    feedback = models.IntegerField(verbose_name=_("Feedback"), default=1)#bedrooms
+    feedback = models.IntegerField(verbose_name=_("Feedback"), default=1)  # bedrooms
 
     lectures = models.DecimalField(
-        verbose_name=_("Lectures"), max_digits=8, decimal_places=2, default=1.0#bathrooms
+        verbose_name=_("Lectures"),
+        max_digits=8,
+        decimal_places=2,
+        default=1.0,  # bathrooms
     )
 
     subject = models.CharField(
@@ -109,7 +116,6 @@ class Property(TimeStampedUUIDModel):
         null=True,
         blank=True,
     )
-
 
     published_status = models.BooleanField(
         verbose_name=_("Published Status"), default=False

@@ -11,16 +11,14 @@ from rest_framework.views import APIView
 from .exceptions import PropertyNotFound
 from .models import Property, PropertyViews
 from .pagination import PropertyPagination
-from .serializers import (PropertyCreateSerializer, PropertySerializer,PropertyViewSerializer)
+from .serializers import (PropertyCreateSerializer, PropertySerializer,
+                          PropertyViewSerializer)
 
 logger = logging.getLogger(__name__)
 
 
 class PropertyFilter(django_filters.FilterSet):
-
-    subject = django_filters.CharFilter(
-        field_name="subject", lookup_expr="iexact"
-    )
+    subject = django_filters.CharFilter(field_name="subject", lookup_expr="iexact")
 
     subject_type = django_filters.CharFilter(
         field_name="subject_type", lookup_expr="iexact"
@@ -51,7 +49,6 @@ class ListAllPropertiesAPIView(generics.ListAPIView):
 
 
 class ListAgentsPropertiesAPIView(generics.ListAPIView):
-
     serializer_class = PropertySerializer
     pagination_class = PropertyPagination
     filter_backends = [

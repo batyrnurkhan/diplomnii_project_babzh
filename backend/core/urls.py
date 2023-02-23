@@ -1,10 +1,10 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import include, path
 
 urlpatterns = [
-    path('supersecret/', admin.site.urls),
+    path("supersecret/", admin.site.urls),
     path("api/v1/auth/", include("djoser.urls")),
     path("api/v1/auth/", include("djoser.urls.jwt")),
     path("api/v1/profile/", include("apps.profiles.urls")),
@@ -13,6 +13,6 @@ urlpatterns = [
     path("api/v1/enquiries/", include("apps.enquiries.urls")),
 ]
 
-admin.site.site_header= 'HEES Admin'
-admin.site.site_title= 'HEES Admin Portal'
-admin.site.index_title= 'Welcome to the HEES Admin Portal'
+admin.site.site_header = "HEES Admin"
+admin.site.site_title = "HEES Admin Portal"
+admin.site.index_title = "Welcome to the HEES Admin Portal"
