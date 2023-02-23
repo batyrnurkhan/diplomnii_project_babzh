@@ -759,3 +759,24 @@ LINE 1: SELECT COUNT(*) AS "__count" FROM "properties_property"
 2023-02-22 22:52:54,452 django.utils.autoreload INFO     C:\Users\batyr\OneDrive\Документы\GitHub\diplomnii_project_babzh\backend\core\urls.py changed, reloading.
 2023-02-22 22:52:56,004 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-02-22 17:06:54,610 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 17:35:01,024 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 17:45:28,837 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 23:46:10,880 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 23:59:43,576 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 18:01:03,814 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 18:06:52,195 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 18:08:28,009 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 00:08:37,793 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 00:09:06,674 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 00:09:37,257 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 00:11:06,789 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 18:13:02,634 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 18:15:09,485 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-22 18:25:15,326 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 00:28:06,529 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 00:28:57,835 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 00:29:00,844 django.request WARNING  Not Found: /
+2023-02-23 02:21:24,956 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 02:22:59,965 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-02-23 02:23:58,570 django.request WARNING  Not Found: /
+2023-02-23 02:23:58,888 django.request WARNING  Not Found: /favicon.ico
